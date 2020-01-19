@@ -95,13 +95,13 @@ namespace MCBEIdentifier
 
         private bool loadModelWizard()
         {
-            if (!showConfigureDialog())
-            {
-                MessageBox.Show("設定がキャンセルされました。", FormTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+            //if (!showConfigureDialog())
+            //{
+            //    MessageBox.Show("設定がキャンセルされました。", FormTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.Close();
 
-                return false;
-            }
+            //    return false;
+            //}
 
             if (!showModelPathSelecter())
             {
@@ -280,6 +280,17 @@ namespace MCBEIdentifier
 
         private void モデルを開きなおすRToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            extendMode = false;
+            descriptionsCheckedListBox.Visible = false;
+            candidatesListBox.Visible = false;
+
+            if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
+            {
+                extendMode = true;
+                descriptionsCheckedListBox.Visible = true;
+                candidatesListBox.Visible = true;
+            }
+
             identifier = null;
 
             questionHasPicLabel.Visible = false;
@@ -322,6 +333,13 @@ namespace MCBEIdentifier
 
         private void IdentifierMain_Load(object sender, EventArgs e)
         {
+            if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
+            {
+                extendMode = true;
+                descriptionsCheckedListBox.Visible = true;
+                candidatesListBox.Visible = true;
+            }
+
             var args = Environment.GetCommandLineArgs();
             if (args.Length == 2)
             {
@@ -333,13 +351,13 @@ namespace MCBEIdentifier
                     var ret = openModel(path);
                     if (ret.success)
                     {
-                        if (!showConfigureDialog())
-                        {
-                            MessageBox.Show("設定がキャンセルされました。", FormTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            this.Close();
+                        //if (!showConfigureDialog())
+                        //{
+                        //    MessageBox.Show("設定がキャンセルされました。", FormTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //    this.Close();
 
-                            return;
-                        }
+                        //    return;
+                        //}
 
                         modelPath = path;
                         モデルの場所を開くDToolStripMenuItem.Enabled = true;
