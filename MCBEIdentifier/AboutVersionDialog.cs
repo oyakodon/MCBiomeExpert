@@ -26,6 +26,8 @@ namespace MCBEIdentifier
             versionLabel.Text = $"{asmVersion.Major}.{asmVersion.Minor}";
             copyrightLabel.Text = asmCopyright;
 
+            forGithubLinkLabel.Visible = githubLinkLabel.Visible = true;
+            githubLinkLabel.Text = "https://github.com/oyakodon/MCBiomeExpert";
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
