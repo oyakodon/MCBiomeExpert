@@ -85,6 +85,27 @@ namespace MCBECore
             }
         }
 
+        public int RemainingDescriptionsToAsk
+        {
+            get
+            {
+                var set = new HashSet<string>();
+                foreach(var r in candidateQueue)
+                {
+                    foreach(var id in r.antecedents.Keys)
+                    {
+                        if (set.Contains(id) || conditions.ContainsKey(id)) continue;
+
+                        if (!model.descriptions.Find(d => d.id == id).isInternal)
+                        {
+                            set.Add(id);
+                        }
+                    }
+                }
+
+                return set.Count;
+            }
+        }
 
         public enum ResultState
         {

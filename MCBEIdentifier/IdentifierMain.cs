@@ -167,9 +167,9 @@ namespace MCBEIdentifier
             }
             else
             {
-                var cand = identifier.Candidates.Count();
+                var rem = identifier.RemainingDescriptionsToAsk;
 
-                answerProgressBar.Value = (int)(askedCount * 100.0 / (cand + askedCount));
+                answerProgressBar.Value = (int)(askedCount * 100.0 / (rem + askedCount));
             }
 
             if (identifier.State == MCBECore.Identifier.ResultState.Determined)
