@@ -34,5 +34,10 @@ namespace MCBEEditor
         {
             this.Close();
         }
+
+        private void githubLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(githubLinkLabel.Text);
+        }
     }
 }

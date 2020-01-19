@@ -32,11 +32,11 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.confirmButton = new System.Windows.Forms.Button();
             this.panelDialog = new System.Windows.Forms.Panel();
-            this.githubLinkLabel = new System.Windows.Forms.Label();
             this.forGithubLinkLabel = new System.Windows.Forms.Label();
             this.forVersionLabel = new System.Windows.Forms.Label();
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.githubLinkLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.panelDialog.SuspendLayout();
             this.SuspendLayout();
@@ -85,16 +85,6 @@
             this.panelDialog.Size = new System.Drawing.Size(455, 128);
             this.panelDialog.TabIndex = 3;
             // 
-            // githubLinkLabel
-            // 
-            this.githubLinkLabel.AutoSize = true;
-            this.githubLinkLabel.Location = new System.Drawing.Point(145, 72);
-            this.githubLinkLabel.Name = "githubLinkLabel";
-            this.githubLinkLabel.Size = new System.Drawing.Size(11, 12);
-            this.githubLinkLabel.TabIndex = 6;
-            this.githubLinkLabel.Text = "-";
-            this.githubLinkLabel.Visible = false;
-            // 
             // forGithubLinkLabel
             // 
             this.forGithubLinkLabel.AutoSize = true;
@@ -132,6 +122,17 @@
             this.versionLabel.TabIndex = 2;
             this.versionLabel.Text = "-";
             // 
+            // githubLinkLabel
+            // 
+            this.githubLinkLabel.AutoSize = true;
+            this.githubLinkLabel.Location = new System.Drawing.Point(145, 72);
+            this.githubLinkLabel.Name = "githubLinkLabel";
+            this.githubLinkLabel.Size = new System.Drawing.Size(11, 12);
+            this.githubLinkLabel.TabIndex = 7;
+            this.githubLinkLabel.TabStop = true;
+            this.githubLinkLabel.Text = "-";
+            this.githubLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.githubLinkLabel_LinkClicked);
+            // 
             // AboutVersionDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -162,6 +163,6 @@
         private System.Windows.Forms.Label versionLabel;
         private System.Windows.Forms.Label forVersionLabel;
         private System.Windows.Forms.Label forGithubLinkLabel;
-        private System.Windows.Forms.Label githubLinkLabel;
+        private System.Windows.Forms.LinkLabel githubLinkLabel;
     }
 }

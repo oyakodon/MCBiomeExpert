@@ -20,7 +20,7 @@ namespace MCBEIdentifier
             var asmTitle = GetCustomAttribute<AssemblyTitleAttribute>().Title;
             var asmVersion = asm.GetName().Version;
             var asmCopyright = GetCustomAttribute<AssemblyCopyrightAttribute>().Copyright;
-            
+
             this.Text = asmTitle;
             titleLabel.Text = asmTitle;
             versionLabel.Text = $"{asmVersion.Major}.{asmVersion.Minor}";
@@ -33,6 +33,11 @@ namespace MCBEIdentifier
         private void confirmButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void githubLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(githubLinkLabel.Text);
         }
     }
 }
