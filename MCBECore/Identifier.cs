@@ -158,7 +158,10 @@ namespace MCBECore
 
                         foreach (var d in rule.consequents)
                         {
-                            conditions.Add(d.Key, d.Value);
+                            if (!conditions.ContainsKey(d.Key))
+                            {
+                                conditions.Add(d.Key, d.Value);
+                            }
                         }
                         continue;
                     }
