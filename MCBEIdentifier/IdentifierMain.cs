@@ -168,8 +168,11 @@ namespace MCBEIdentifier
             else
             {
                 var rem = identifier.RemainingDescriptionsToAsk;
+                var current = answerProgressBar.Value;
 
-                answerProgressBar.Value = (int)(askedCount * 100.0 / (rem + askedCount));
+                var progress = (double)askedCount / (rem + askedCount);
+
+                answerProgressBar.Value = (int)(current + (100 - current) * progress);
             }
 
             if (identifier.State == MCBECore.Identifier.ResultState.Determined)
