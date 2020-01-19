@@ -32,11 +32,11 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.confirmButton = new System.Windows.Forms.Button();
             this.panelDialog = new System.Windows.Forms.Panel();
+            this.githubLinkLabel = new System.Windows.Forms.Label();
+            this.forGithubLinkLabel = new System.Windows.Forms.Label();
             this.forVersionLabel = new System.Windows.Forms.Label();
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
-            this.forGithubLinkLabel = new System.Windows.Forms.Label();
-            this.githubLinkLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox)).BeginInit();
             this.panelDialog.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(222, 134);
+            this.confirmButton.Location = new System.Drawing.Point(352, 134);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(91, 23);
             this.confirmButton.TabIndex = 0;
@@ -82,8 +82,28 @@
             this.panelDialog.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDialog.Location = new System.Drawing.Point(0, 0);
             this.panelDialog.Name = "panelDialog";
-            this.panelDialog.Size = new System.Drawing.Size(325, 128);
+            this.panelDialog.Size = new System.Drawing.Size(455, 128);
             this.panelDialog.TabIndex = 3;
+            // 
+            // githubLinkLabel
+            // 
+            this.githubLinkLabel.AutoSize = true;
+            this.githubLinkLabel.Location = new System.Drawing.Point(145, 72);
+            this.githubLinkLabel.Name = "githubLinkLabel";
+            this.githubLinkLabel.Size = new System.Drawing.Size(11, 12);
+            this.githubLinkLabel.TabIndex = 6;
+            this.githubLinkLabel.Text = "-";
+            this.githubLinkLabel.Visible = false;
+            // 
+            // forGithubLinkLabel
+            // 
+            this.forGithubLinkLabel.AutoSize = true;
+            this.forGithubLinkLabel.Location = new System.Drawing.Point(97, 72);
+            this.forGithubLinkLabel.Name = "forGithubLinkLabel";
+            this.forGithubLinkLabel.Size = new System.Drawing.Size(42, 12);
+            this.forGithubLinkLabel.TabIndex = 5;
+            this.forGithubLinkLabel.Text = "GitHub:";
+            this.forGithubLinkLabel.Visible = false;
             // 
             // forVersionLabel
             // 
@@ -112,31 +132,11 @@
             this.versionLabel.TabIndex = 2;
             this.versionLabel.Text = "-";
             // 
-            // forGithubLinkLabel
-            // 
-            this.forGithubLinkLabel.AutoSize = true;
-            this.forGithubLinkLabel.Location = new System.Drawing.Point(97, 72);
-            this.forGithubLinkLabel.Name = "forGithubLinkLabel";
-            this.forGithubLinkLabel.Size = new System.Drawing.Size(42, 12);
-            this.forGithubLinkLabel.TabIndex = 5;
-            this.forGithubLinkLabel.Text = "GitHub:";
-            this.forGithubLinkLabel.Visible = false;
-            // 
-            // githubLinkLabel
-            // 
-            this.githubLinkLabel.AutoSize = true;
-            this.githubLinkLabel.Location = new System.Drawing.Point(145, 72);
-            this.githubLinkLabel.Name = "githubLinkLabel";
-            this.githubLinkLabel.Size = new System.Drawing.Size(11, 12);
-            this.githubLinkLabel.TabIndex = 6;
-            this.githubLinkLabel.Text = "-";
-            this.githubLinkLabel.Visible = false;
-            // 
             // AboutVersionDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 166);
+            this.ClientSize = new System.Drawing.Size(455, 166);
             this.Controls.Add(this.panelDialog);
             this.Controls.Add(this.confirmButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
